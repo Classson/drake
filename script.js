@@ -1,9 +1,3 @@
-const quizContainer = document.getElementById('quiz');
-
-const resultsContainer = document.getElementById('results');
-
-const submitButton = document.getElementById('submit');
-
 function buildQuiz(){
     //array to store the output
     const output = [];
@@ -43,9 +37,39 @@ function buildQuiz(){
 
 function showResults(){}
 
+const quizContainer = document.getElementById('quiz');
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit');
+const myQuestions = [
+    question: "What's your cat's name?",
+    answers: {
+        a: "Coach",
+        b: "James"
+      },
+      correctAnswer: "a"
+    },
+    {
+    question: "What color is he?",
+    answers: {
+        a: "black",
+        b: "orange"
+      },
+      correctAnswer: "b"
+    },
+    {
+    question: "Is he a good cat?",
+    answers: {
+        a: "yes",
+        b: "no"
+      },
+      correctAnswer: "a"
+    }
+];
+
 //display quiz
 buildQuiz();
 
 //show results on submit
 
 submitButton.addEventListener(click, showResults);
+})();
