@@ -1,3 +1,4 @@
+(function() {
 function buildQuiz(){
     //array to store the output
     const output = [];
@@ -8,34 +9,72 @@ function buildQuiz(){
             //list of answer choices
             const answers = [];
             
-            //each answer
+            //for each question
+            myQuestions.forEach((currentQuestion, questionNumber) => {
+                
+            //store list of answer choices
+            const answers = [];
+                
+            //for each answer
             for(letter in currentQuestion.answers){
                 
                 //html radio button
                 answers.push(
-                <label>
+                `<label>
                     <input type="radio" 
                     name="question${questionNumber}" value="${letter}">
                     
                     ${letter} :
                     ${currentQuestion.answers[letter]}
-                </label>
+                </label>`
                 
                 );
             }
             //add question and answer to output
             output.push(
-            <div class="question"> $(currentQuestion.question)</div>
+            `<div class="question"> ${currentQuestion.question}</div>
+            <div class="answers">
+            $`{answers.join("")}</div>`
             );
-        }
-    
-    );
+        });
     
     //combine output string of html and display
-    quizContainer.innerHTML = output.join('');
+    quizContainer.innerHTML = output.join("");
 }
 
-function showResults(){}
+function showResults(){
+
+//gather answer containers
+const answerContainers = quizContainer.querySelectorAll(".answers");
+
+//keep track of user's anaswers
+    let numCorrect = 0;
+
+//for each questions
+    myQuestions.forEach((currentQuestion, questionNumber) => {
+        //find selected answer
+        const answerContainer = answerContainers[questionNumber];
+        const selector = `input[name=question${questionNumber}]:checked`;
+        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+        
+        //if answer is correct
+        if(userAnswer === currentQuestion.correctAnswer) {
+            //add to the number of correct answers
+            numCorrect++;
+            
+            //color the answer green
+            
+            answerContainers[questionNumber].style.color = "lightgreen";
+        } else {
+            //if answer wrong or blank color red
+            
+            answerContainers[questionNumber].style.color = "red";
+        }
+    });
+    
+//show number of correct results out of total
+resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+}
 
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
