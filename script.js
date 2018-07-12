@@ -19,7 +19,6 @@
           </label>`
         );
       }
-
       // add this question and its answers to the output
       output.push(
         `<div class="question"> ${currentQuestion.question} </div>
@@ -70,10 +69,10 @@
     { 
     question: "What's your cat's name?",
     answers: {
-        a: "Coach",
-        b: "James"
+        Drake: "Drake",
+        Emo: "Emo"
       },
-      correctAnswer: "a"
+      correctAnswer: "Drake"
     },
     {
     question: "What color is he?",
