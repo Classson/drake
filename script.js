@@ -1,14 +1,14 @@
 (function() {
   function buildQuiz() {
-    // we'll need a place to store the HTML output
+    // HTML output
     const output = [];
 
-    // for each question...
+    // for each question
     myQuestions.forEach((currentQuestion, questionNumber) => {
-      // we'll want to store the list of answer choices
+      // list of answer choices
       const answers = [];
 
-      // and for each available answer...
+      // for each available answer
       for (letter in currentQuestion.answers) {
         // ...add an HTML radio button
         answers.push(
@@ -27,18 +27,18 @@
       );
     });
 
-    // finally combine our output list into one string of HTML and put it on the page
+    // combine output list into string of HTML and put it on the page
     quizContainer.innerHTML = output.join("");
   }
 
   function showResults() {
-    // gather answer containers from our quiz
+    // gather answer containers from quiz
     const answerContainers = quizContainer.querySelectorAll(".answers");
 
     // keep track of user's answers
     let numCorrect = 0;
 
-    // for each question...
+    // for each question
     myQuestions.forEach((currentQuestion, questionNumber) => {
       // find selected answer
       const answerContainer = answerContainers[questionNumber];
