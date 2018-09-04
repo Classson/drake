@@ -3,6 +3,7 @@ body{
 	font-family: sans-serif;
     background-color: #ffcc00;
 	color: #211e1f;
+    margin: 20px;
 }
 .question{
 	font-weight: 600;
@@ -26,4 +27,9 @@ body{
 }
 #submit:hover{
 	background-color: #ba325f;
+}
+
+p{
+    margin: 5px;
+    padding: 8px;
 }
