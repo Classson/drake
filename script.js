@@ -46,16 +46,16 @@ const myQuestions = [
     {
         question: "Next time we fuck, I don't wanna fuck, I wanna make love. Next time we talk, I don't wanna just talk, I wanna trust. Next time I stand tall I wanna be standing for you",
         answers: {
-            a: Drake,
-            b: Emo
+            a: "Drake",
+            b: "Emo"
     },
         correctAnswer: 'a'
     },
     {
         question: "Breathe in deep, let it out slow. Did you hear it’s all my fault again? I know why no one else knows why I am all alone again.",
         answers: {
-            a: Drake,
-            b: Emo
+            a: "Drake",
+            b: "Emo"
         },
         correctAnswer: 'b'
     }
@@ -83,7 +83,7 @@ function buildQuiz (questions, quizContainer, resutlsContainer) {
                             + '</label>');
             }
             
-            outpush.push(
+            output.push(
             '<div class="question">' + questions[i].question + '</div>' + '<div class="answers>' + answers.join('') + '</div>');
         }
         
