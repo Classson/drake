@@ -49,7 +49,7 @@ const myQuestions = [
             a: "Drake",
             b: "Emo"
     },
-        correctAnswer: 'a'
+        correctAnswer: 'Drake'
     },
     {
         question: "Breathe in deep, let it out slow. Did you hear it’s all my fault again? I know why no one else knows why I am all alone again.",
@@ -85,6 +85,30 @@ const myQuestions = [
     },
     {
         question: "So cry if you need to, but I can't stay to watch you, that's the wrong thing to do.",
+        answers: {
+            a: "Drake",
+            b: "Emo"
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question: "I never had you, although I would be glad to. I'd probably go and tattoo, your name on my heart.",
+        answers: {
+            a: "Drake",
+            b: "Emo"
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question: "I'm scared that every girl I care for will find a better man and end up happier in the long run.",
+        answers: {
+            a: "Drake",
+            b: "Emo"
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question: "I need you to rescue me from my destiny/I'm trying to live right and give you whatever's left of me.",
         answers: {
             a: "Drake",
             b: "Emo"
