@@ -58,6 +58,38 @@ const myQuestions = [
             b: "Emo"
         },
         correctAnswer: 'b'
+    },
+    {
+        question: "Whose bed are you sleeping in? Someone's been hiding you, where have you been?",
+        answers: {
+            a: "Drake",
+            b: "Emo"
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question: "Last night everything was right and the rain was gone. One summer night’s the only time we’ve known. Shut your eyes and when you wake I’ll be gone.",
+        answers: {
+            a: "Drake",
+            b: "Emo"
+        },
+        correctAnswer: 'b'
+    },
+    {
+        question: "The girl I wanna save is like a danger to my health. Try being with somebody that wanna be somebody else.",
+        answers: {
+            a: "Drake",
+            b: "Emo"
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question: "So cry if you need to, but I can't stay to watch you, that's the wrong thing to do.",
+        answers: {
+            a: "Drake",
+            b: "Emo"
+        },
+        correctAnswer: 'a'
     }
 ]
 
