@@ -61,6 +61,11 @@ const myQuestions = [
     }
 ]
 
+let quizContainer = document.getElementById('quiz');
+let resultsContainer = document.getElementById('results');
+let submitButton = document.getElementById('submit');
+
+
 function buildQuiz (questions, quizContainer, resutlsContainer) {
     
     
@@ -87,7 +92,27 @@ function buildQuiz (questions, quizContainer, resutlsContainer) {
     }
     
     function showResults(questions, quizContainer, resutlsContainer) {
+        let answerContainers = quizContainer.querySelectorAll('.answers');
         
+        let userAnswer = '';
+        let numCorrect = 0;
+        
+        for(let i = 0; i < questions.length; i++){
+            
+            userAnswer = (answerContainers[i].querySelector('input[name=question' +i+']:checked')|| {}).value;
+            
+            if(userAnswer === question[i].correctAnswer){
+                numCorrect++;
+                
+                answerContainers[i].style.color = 'lightgreen';
+            }
+            
+            else {
+                answerContainers[i].style.color = 'red';
+            }
+        }
+        
+        resultsContainer.innerHTML = numCorrect + ' Out of ' + questions.length;
     }
     
     showQuestions(questions, quizContainer);
@@ -96,3 +121,6 @@ function buildQuiz (questions, quizContainer, resutlsContainer) {
         showResults(questions, quizContainer, resutlsContainer);
     }
 }
+
+buildQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
