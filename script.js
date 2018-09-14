@@ -49,10 +49,18 @@ const myQuestions = [
             a: "Drake",
             b: "Emo"
     },
-        correctAnswer: 'Drake'
+        correctAnswer: 'a'
     },
     {
         question: "Breathe in deep, let it out slow. Did you hear it’s all my fault again? I know why no one else knows why I am all alone again.",
+        answers: {
+            a: "Drake",
+            b: "Emo"
+        },
+        correctAnswer: 'b'
+    },
+    {
+        question: 'I know you well enough to know you never loved me?',
         answers: {
             a: "Drake",
             b: "Emo"
@@ -90,6 +98,14 @@ const myQuestions = [
             b: "Emo"
         },
         correctAnswer: 'a'
+    },
+    {
+        question: "Is this how it feels/When you don't even fit into your own skin? And it’s getting tighter. Every day I'm getting smaller",
+        answers: {
+            a: "Drake",
+            b: "Emo"
+        },
+        correctAnswer: 'b'
     },
     {
         question: "I never had you, although I would be glad to. I'd probably go and tattoo, your name on my heart.",
