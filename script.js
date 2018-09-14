@@ -60,7 +60,7 @@ const myQuestions = [
         correctAnswer: 'b'
     },
     {
-        question: 'I know you well enough to know you never loved me?',
+        question: 'I know you well enough to know you never loved me',
         answers: {
             a: "Drake",
             b: "Emo"
