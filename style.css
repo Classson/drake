@@ -3,10 +3,16 @@ body{
 	font-family: sans-serif;
     background-color: #ffcc00;
 	color: #211e1f;
-    margin: 20px;
+    margin: 30px;
+    padding: 20px;
 }
+h1{
+    text-align: center;
+}
+
 .question{
 	font-weight: 600;
+    padding: 10px;
 }
 .answers {
   margin-bottom: 20px;
