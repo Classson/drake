@@ -175,7 +175,10 @@ function generateQuiz (questions, quizContainer, resutlsContainer) {
 	quizContainer.innerHTML = output.join('');
 }
     
+let correctImg = '<img src="https://i.kym-cdn.com/entries/icons/original/000/020/147/drake.jpg">';
     
+let incorrectImg = '<img src="https://res-3.cloudinary.com/revolttv/image/upload/w_800/c_crop,f_auto,fl_lossy.force_strip,q_auto:best,h_450,w_800,x_0,y_0/eda26h7gxnsjmxwhhwm5.jpg">';
+
 function showResults(questions, quizContainer, resultsContainer){
 	
 	
