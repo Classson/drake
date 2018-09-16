@@ -45,11 +45,7 @@ Quotes
 const myQuestions = [
     {
         question: "Next time we fuck, I don't wanna fuck, I wanna make love. Next time we talk, I don't wanna just talk, I wanna trust. Next time I stand tall I wanna be standing for you",
-        answers: {
-            a: "Drake",
-            b: "Emo"
-    },
-        correctAnswer: 'a'
+        answer: "Drake"
     },
     {
         question: "Breathe in deep, let it out slow. Did you hear it’s all my fault again? I know why no one else knows why I am all alone again.",
@@ -133,92 +129,95 @@ const myQuestions = [
     }
 ]
 
-let quizContainer = document.getElementById('quiz');
-let resultsContainer = document.getElementById('results');
-let submitButton = document.getElementById('submit');
 
 
-function generateQuiz (questions, quizContainer, resutlsContainer) {
-    
-    
-   function showQuestions(questions, quizContainer){
-	
-	var output = [];
-	var answers;
-
-	
-	for(var i=0; i<questions.length; i++){
-		
-		answers = [];
-
-		
-		for(letter in questions[i].answers){
-
-			
-			answers.push(
-				'<label>'
-					+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
-					+ letter + ': '
-					+ questions[i].answers[letter]
-				+ '</label>'
-			);
-		}
-
-		
-		output.push(
-			'<div class="question">' + questions[i].question + '</div>'
-			+ '<div class="answers">' + answers.join('') + '</div>'
-		);
-	}
-
-	
-	quizContainer.innerHTML = output.join('');
-}
-    
-let correctImg = '<img src="https://i.kym-cdn.com/entries/icons/original/000/020/147/drake.jpg">';
-    
-let incorrectImg = '<img src="https://res-3.cloudinary.com/revolttv/image/upload/w_800/c_crop,f_auto,fl_lossy.force_strip,q_auto:best,h_450,w_800,x_0,y_0/eda26h7gxnsjmxwhhwm5.jpg">';
-
-function showResults(questions, quizContainer, resultsContainer){
-	
-	
-	var answerContainers = quizContainer.querySelectorAll('.answers');
-	
-	
-	var userAnswer = '';
-	var numCorrect = 0;
-	
-	
-	for(var i=0; i<questions.length; i++){
-
-		
-		userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
-		
-		
-		if(userAnswer===questions[i].correctAnswer){
-			
-			numCorrect++;
-			
-			
-			answerContainers[i].style.color = 'lightgreen';
-		}
-		
-		else{
-			
-			answerContainers[i].style.color = 'red';
-		}
-	}
-
-	
-	resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
-}
-    
-    showQuestions(questions, quizContainer);
-    
-    submitButton.onclick = function (){
-        showResults(questions, quizContainer, resutlsContainer);
-    }
-}
-
-generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+//
+//let quizContainer = document.getElementById('quiz');
+//let resultsContainer = document.getElementById('results');
+//let submitButton = document.getElementById('submit');
+//
+//
+//function generateQuiz (questions, quizContainer, resutlsContainer) {
+//    
+//    
+//   function showQuestions(questions, quizContainer){
+//	
+//	var output = [];
+//	var answers;
+//
+//	
+//	for(var i=0; i<questions.length; i++){
+//		
+//		answers = [];
+//
+//		
+//		for(letter in questions[i].answers){
+//
+//			
+//			answers.push(
+//				'<label>'
+//					+ '<input type="radio" name="question'+i+'" value="'+letter+'">'
+//					+ letter + ': '
+//					+ questions[i].answers[letter]
+//				+ '</label>'
+//			);
+//		}
+//
+//		
+//		output.push(
+//			'<div class="question">' + questions[i].question + '</div>'
+//			+ '<div class="answers">' + answers.join('') + '</div>'
+//		);
+//	}
+//
+//	
+//	quizContainer.innerHTML = output.join('');
+//}
+//    
+//let correctImg = '<img src="https://i.kym-cdn.com/entries/icons/original/000/020/147/drake.jpg">';
+//    
+//let incorrectImg = '<img src="https://res-3.cloudinary.com/revolttv/image/upload/w_800/c_crop,f_auto,fl_lossy.force_strip,q_auto:best,h_450,w_800,x_0,y_0/eda26h7gxnsjmxwhhwm5.jpg">';
+//
+//function showResults(questions, quizContainer, resultsContainer){
+//	
+//	
+//	var answerContainers = quizContainer.querySelectorAll('.answers');
+//	
+//	
+//	var userAnswer = '';
+//	var numCorrect = 0;
+//	
+//	
+//	for(var i=0; i<questions.length; i++){
+//
+//		
+//		userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+//		
+//		
+//		if(userAnswer===questions[i].correctAnswer){
+//			
+//			numCorrect++;
+//			
+//			
+//			answerContainers[i].style.color = 'lightgreen';
+//		}
+//		
+//		else{
+//			
+//			answerContainers[i].style.color = 'red';
+//		}
+//	}
+//
+//	
+//	resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+//}
+//    
+//    showQuestions(questions, quizContainer);
+//    
+//    submitButton.onclick = function (){
+//        showResults(questions, quizContainer, resutlsContainer);
+//    }
+//}
+//
+//generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
