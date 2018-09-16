@@ -129,7 +129,20 @@ const myQuestions = [
     }
 ]
 
+let numberOfQuestions = myQuestions.length;
+let currentQuestion = 0;
 
+console.log(numberOfQuestions);
+
+let nextButton = document.getElementById("nextQ");
+
+function nextQuestion(){
+    currentQuestion++;
+}
+
+nextButton.addEventListener("click", nextQuestion);
+
+console.log(currentQuestion);
 
 //
 //let quizContainer = document.getElementById('quiz');
